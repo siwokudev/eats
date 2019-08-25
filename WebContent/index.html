@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>QTMeats</title>
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<!--My content-->
+				<h2>QTMeats title</h2>
+				<h6>Prueba Servlets</h6>
+				<div class="row">
+					<div class="col-6">
+						<!------------ Producto -------------------->
+						Prueba Producto Servlet
+						<form action="" >
+							<input id="btnActualizarProducto" type="button" value="Actualizar">
+						</form>
+						<form action="" >
+							<input id="btnLeerIndividualProducto" type="button" value="Leer">
+						</form>
+						<form action="" >
+							<input id="btnLeerGeneralProducto" type="button"
+								value="Leer General">
+						</form>
+						<form action="" >
+							<input id="btnCrearProducto" type="button" value="Crear">
+						</form>
+						<form action="" >
+							<input id="btnBorrarProducto" type="button" value="Borrar">
+						</form>
+						<div id="ProductoResultado">Resultado Producto</div>
+						<!------------ /Producto -------------------->
+					</div>
+
+					<div class="col-6">
+						<!------------ Comanda -------------------->
+						Prueba Comanda Servlet
+						<form action="ActualizarComandaServlet" method="POST">
+							<input type="button" value="Actualizar">
+						</form>
+						<form action="LeerComandaServlet" method="POST">
+							<input type="button" value="Leer Individual">
+						</form>
+						<form action="LeerGeneralComandaServlet" method="POST">
+							<input type="button" value="Leer General">
+						</form>
+						<form action="CrearComandaServlet" method="POST">
+							<input type="button" value="Crear">
+						</form>
+						<form action="BorrarComandaServlet" method="POST">
+							<input type="button" value="Borrar">
+						</form>
+						<div id="ComandaResultado"></div>
+						<!------------ /Comanda -------------------->
+					</div>
+
+					<div class="col-6">
+						<!------------ Usuario -------------------->
+						Prueba Usuario Servlet
+						<form action="ActualizarUsuarioServlet" method="POST">
+							<input type="button" value="Actualizar">
+						</form>
+						<form action="LeerUsuarioServlet" method="POST">
+							<input type="button" value="Leer">
+						</form>
+						<form action="LeerGeneralUsuarioServlet" method="POST">
+							<input type="button" value="Leer Geenral">
+						</form>
+						<form action="CrearUsuarioServlet" method="POST">
+							<input type="button" value="Crear">
+						</form>
+						<form action="BorrarUsuarioServlet" method="POST">
+							<input type="button" value="Borrar">
+						</form>
+						<div id="UsuarioResultado"></div>
+						<!------------ /usuario -------------------->
+					</div>
+					
+					<div class="col-6">
+						<!------------ Bebida -------------------->
+						Prueba Bebida Servlet
+						<form action="ActualizarBebidaServlet" method="POST">
+							<input type="button" value="Actualizar">
+						</form>
+						<form action="LeerBebidaServlet" method="POST">
+							<input type="button" value="Leer">
+						</form>
+						<form action="LeerGeneralBebidaServlet" method="POST">
+							<input type="button" value="Leer General">
+						</form>
+						<form action="CrearBebidaServlet" method="POST">
+							<input type="button" value="Crear">
+						</form>
+						<form action="BorrarBebidaServlet" method="POST">
+							<input type="button" value="Borrar">
+						</form>
+						<div id="BebidaResultado"> Resultado Bebida</div>
+						<!------------ /Bebida -------------------->
+					</div>
+					<div class="col-6">
+						<!------------ Bebida -------------------->
+						Prueba Bebida Servlet
+						<form action="ActualizarBebidaServlet" method="POST">
+							<input type="button" value="Actualizar">
+						</form>
+						<form action="LeerBebidaServlet" method="POST">
+							<input type="button" value="Leer">
+						</form>
+						<form action="LeerGeneralBebidaServlet" method="POST">
+							<input type="button" value="Leer General">
+						</form>
+						<form action="CrearBebidaServlet" method="POST">
+							<input type="button" value="Crear">
+						</form>
+						<form action="BorrarBebidaServlet" method="POST">
+							<input type="button" value="Borrar">
+						</form>
+						<div id="BebidaResultado"> Resultado Bebida</div>
+						<!------------ /Bebida -------------------->
+					</div>
+					<div class="col-6">
+						<!------------ Ingredientes -------------------->
+						Prueba Ingredientes Servlet
+						<form action="ActualizarIngredienteServlet" method="POST">
+							<input type="button" value="Actualizar">
+						</form>
+						<form action="LeerIngredienteServlet" method="POST">
+							<input type="button" value="Leer">
+						</form>
+						<form action="LeerGeneralIngredienteServlet" method="POST">
+							<input type="button" value="Leer General">
+						</form>
+						<form action="CrearIngredienteServlet" method="POST">
+							<input type="button" value="Crear">
+						</form>
+						<form action="BorrarIngredienteServlet" method="POST">
+							<input type="button" value="Borrar">
+						</form>
+						<div id="IngredienteResultado"></div>
+						<!------------ /Ingrediente -------------------->
+					</div>
+
+					<div class="col-6">
+						<!------------ Tamaño -------------------->
+						Prueba Tamaño Servlet
+						<form action="ActualizarTamañoServlet" method="POST">
+							<input type="button" value="Actualizar">
+						</form>
+						<form action="LeerTamañoServlet" method="POST">
+							<input type="button" value="Leer">
+						</form>
+						<form action="LeerGeneralTamañoServlet" method="POST">
+							<input type="button" value="Leer General">
+						</form>
+						<form action="CrearTamañoServlet" method="POST">
+							<input type="button" value="Crear">
+						</form>
+						<form action="BorrarTamañoServlet" method="POST">
+							<input type="button" value="Borrar">
+						</form>
+						<div id="TamañoResultado"></div>
+						<!------------ /Tamaño -------------------->
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Jquery,popper,boostrap-->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="scripts/script.js"></script>
+	<script src="scripts/productoAjax.js"></script>
+	<script src="scripts/bebidaAjax.js"></script>
+	<script src="scripts/tipoBebidaAjax.js"></script>
+</body>
+</html>
