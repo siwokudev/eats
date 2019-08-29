@@ -1,4 +1,4 @@
-package com.qtmeats.controller.producto;
+package com.qtmeats.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
