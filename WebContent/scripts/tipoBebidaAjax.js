@@ -1,28 +1,31 @@
-//let xhr = new XMLHttpRequest();
+var xhr = new XMLHttpRequest();
 
 function tipoBebidaAjax(){
-	/*
+	
+	//alert("funcionando TipoBebidas Script");
+	
 	var btnCreate = document.querySelector("#btnCrearTipoBebida");
-		btnCreate.onclick = createDrinkTypeRequest;
+		btnCreate.onclick = createTipoBebidaRequest;
 		
-	var btnReadIndividual = document.querySelector("#btnLeerIndividualtipoBebida");
-		btnReadIndividual.onclick = readIndividualDrinkTypeRequest;
+	var btnReadIndividual = document.querySelector("#btnLeerIndividualTipoBebida");
+		btnReadIndividual.onclick = readIndividualTipoBebidaRequest;
 		
-	var btnReadGeneral = document.querySelector("#btnLeerGeneraltipoBebida");
-		btnReadGeneral.onclick = readGeneralDrinkTypeRequest;
+	var btnReadGeneral = document.querySelector("#btnLeerGeneralTipoBebida");
+		btnReadGeneral.onclick = readGeneralTipoBebidaRequest;
 		
-	var btnUpdate = document.querySelector("#btnActualizartipoBebida");
-		btnUpdate.onclick = updateDrinkTypeRequest;
+	var btnUpdate = document.querySelector("#btnActualizarTipoBebida");
+		btnUpdate.onclick = updateTipoBebidaRequest;
 		
-	var btnDelete = document.querySelector("#btnBorrartipoBebida");
-		btnDelete.onclick = deleteDrinkTypeRequest;
-	*/
+	var btnDelete = document.querySelector("#btnBorrarTipoBebida");
+		btnDelete.onclick = deleteTipoBebidaRequest;
+	
 }
 
-function createDrinkTypeRequest(){
+function createTipoBebidaRequest(){
 	alert("crear request");
 	
-	xhr.open("POST","CreartipoBebidaServlet");
+	xhr.open("POST","TipoBebidaServlet");
+	//xhr.open("POST","CrearTipoBebidaServlet");
 	/*
 	var miFormulario = new FormData();
 	var miBase = document.getElementById("txtBase").value;
@@ -31,80 +34,89 @@ function createDrinkTypeRequest(){
 	miFormulario.append("txtBase",miBase);
 	miFormulario.append("txtExponente",miExponente);
 	*/
-	xhr.onload = callBackCreateDrinkType();
+	xhr.onload = callBackCreateTipoBebida();
 	xhr.send(null);
 	
 }
 
-function readIndividualDrinkTypeRequest(){
+function readIndividualTipoBebidaRequest(){
 	//alert("leer individual");
-	xhr.open("POST","LeertipoBebidaServlet");
+	xhr.open("GET","TipoBebidaServlet");
+	//xhr.open("POST","LeerTipoBebidaServlet");
 	//procesado de informacion aquí
 	//
-	xhr.onload = callBackReadIndividualDrinkType;
-	xhr.send(null);
+	xhr.onload = callBackReadIndividualTipoBebida;
+	xhr.send(null); //aquí va el parametro?
 }
 
-function readGeneralDrinkTypeRequest(){
+function readGeneralTipoBebidaRequest(){
 	//alert("leer general");
-	xhr.open("POST","LeerGeneraltipoBebidaServlet");
+	xhr.open("GET","TipoBebidaServlet");
+	//xhr.open("POST","LeerGeneralTipoBebidaServlet");
 	//procesado de informacion aquí
 	//
-	xhr.onload = callBackReadGeneralDrinkType;
+	xhr.onload = callBackReadGeneralTipoBebida;
 	xhr.send(null);
 }
 
-function updateDrinkTypeRequest(){
+function updateTipoBebidaRequest(){
 	//alert("actualizar");
-	xhr.open("POST","ActualizartipoBebidaServlet");
+	xhr.open("PUT","TipoBebidaServlet");
+	//xhr.open("POST","ActualizarTipoBebidaServlet");
 	//procesado de informacion aquí
 	//
-	xhr.onload = callBackUpdateDrinkType;
+	xhr.onload = callBackUpdateTipoBebida;
 	xhr.send(null);
 }
 
-function deleteDrinkTypeRequest(){
+function deleteTipoBebidaRequest(){
 	//alert("borrar");
-	xhr.open("POST","BorrartipoBebidaServlet");
+	xhr.open("DELETE","TipoBebidaServlet");
+	//xhr.open("POST","BorrarTipoBebidaServlet");
 	//procesado de informacion aquí
 	//
-	xhr.onload = callBackDeleteDrinkType;
+	xhr.onload = callBackDeleteTipoBebida;
 	xhr.send(null);
 }
 
-//--------- Call Back Functions -----------------
+//-------------  Call Back Function --------------
 
-function callBackCreateDrinkType(){
+function callBackCreateTipoBebida(){
+	alert("Esperando Respuesta");
 	if(xhr.status == 200){
-		alert("Creado Call back" + xhr.reponseText);
-		//document.querySelector("#resultadoPotencia").innerHTML = xhr.responseText;
+		//alert("Creado Call back" + xhr.reponseText);
+		document.querySelector("#TipoBebidaResultado").innerHTML = xhr.responseText;
 	}
 }
 
-function callBackReadIndividualDrinkType(){
+function callBackReadIndividualTipoBebida(){
 	if(xhr.status == 200){
-		alert("Leido individual" + xhr.reponseText);
+		//alert("Leido individual" + xhr.reponseText);
 		//presentado de informacion
+		document.querySelector("#TipoBebidaResultado").innerHTML = xhr.responseText;
 	}
 }
 
-function callBackReadGeneralDrinkType(){
+function callBackReadGeneralTipoBebida(){
 	if(xhr.status == 200){
-		alert("Leido General" + xhr.reponseText);
+		//alert("Leido General" + xhr.reponseText);
 		//presentado de informacion
+		document.querySelector("#TipoBebidaResultado").innerHTML = xhr.responseText;
 	}
 }
 
-function callBackUpdateDrinkType(){
+function callBackUpdateTipoBebida(){
 	if(xhr.status == 200){
-		alert("Actualizado" + xhr.reponseText);
+		//alert("Actualizado" + xhr.reponseText);
 		//presentado de informacion
+		document.querySelector("#TipoBebidaResultado").innerHTML = xhr.responseText;
 	}
 }
 
-function callBackDeleteDrinkType(){
+function callBackDeleteTipoBebida(){
 	if(xhr.status == 200){
-		alert("Borrado" + xhr.reponseText);
+		//alert("Borrado" + xhr.reponseText);
 		//presentado de informacion
+		document.querySelector("#TipoBebidaResultado").innerHTML = xhr.responseText;
 	}
 }

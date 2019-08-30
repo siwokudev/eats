@@ -1,13 +1,14 @@
 package com.qtmeats.model;
 
-public class TipoProducto {
+public class TipoDulces {
 	private int id;
 	private String tipo;
 
-	public TipoProducto() {
+	public TipoDulces() {
+		super();
 	}
 
-	public TipoProducto(int id, String tipo) {
+	public TipoDulces(int id, String tipo) {
 		this.id = id;
 		this.tipo = tipo;
 	}
@@ -30,7 +31,7 @@ public class TipoProducto {
 
 	@Override
 	public String toString() {
-		return "tipoProducto [id=" + id + ", tipo=" + tipo + "]";
+		return "TipoDulces [id=" + id + ", tipo=" + tipo + "]";
 	}
 
 }

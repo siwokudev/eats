@@ -7,17 +7,21 @@ public class Usuario {
 	private String contraseña;
 	private String telefono;
 	private boolean esAdmin;
+	private String compañia;
 
 	public Usuario() {
 	}
 
-	public Usuario(int id, String nombre, String correo, String contraseña, String telefono, boolean esAdmin) {
+	public Usuario(int id, String nombre, String correo, String contraseña, String telefono, boolean esAdmin,
+			String compañia) {
+		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.correo = correo;
 		this.contraseña = contraseña;
 		this.telefono = telefono;
 		this.esAdmin = esAdmin;
+		this.compañia = compañia;
 	}
 
 	public int getId() {
@@ -68,10 +72,18 @@ public class Usuario {
 		this.esAdmin = esAdmin;
 	}
 
+	public String getCompañia() {
+		return compañia;
+	}
+
+	public void setCompañia(String compañia) {
+		this.compañia = compañia;
+	}
+
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", nombre=" + nombre + ", correo=" + correo + ", contraseña=" + contraseña
-				+ ", telefono=" + telefono + ", esAdmin=" + esAdmin + "]";
+				+ ", telefono=" + telefono + ", esAdmin=" + esAdmin + ", compañia=" + compañia + "]";
 	}
 
 }

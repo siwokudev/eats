@@ -1,27 +1,27 @@
-//let xhr = new XMLHttpRequest();
+var xhr = new XMLHttpRequest();
 
-function productAjax(){
+function productoAjax(){
 	
-	//alert("funcionando");
+	//alert("funcionando Productos Script");
 	
 	var btnCreate = document.querySelector("#btnCrearProducto");
-		btnCreate.onclick = createProductRequest;
+		btnCreate.onclick = createProductoRequest;
 		
 	var btnReadIndividual = document.querySelector("#btnLeerIndividualProducto");
-		btnReadIndividual.onclick = readIndividualProductRequest;
+		btnReadIndividual.onclick = readIndividualProductoRequest;
 		
 	var btnReadGeneral = document.querySelector("#btnLeerGeneralProducto");
-		btnReadGeneral.onclick = readGeneralProductRequest;
+		btnReadGeneral.onclick = readGeneralProductoRequest;
 		
 	var btnUpdate = document.querySelector("#btnActualizarProducto");
-		btnUpdate.onclick = updateProductRequest;
+		btnUpdate.onclick = updateProductoRequest;
 		
 	var btnDelete = document.querySelector("#btnBorrarProducto");
-		btnDelete.onclick = deleteProductRequest;
+		btnDelete.onclick = deleteProductoRequest;
 	
 }
 
-function createProductRequest(){
+function createProductoRequest(){
 	alert("crear request");
 	
 	xhr.open("POST","ProductoServlet");
@@ -34,54 +34,54 @@ function createProductRequest(){
 	miFormulario.append("txtBase",miBase);
 	miFormulario.append("txtExponente",miExponente);
 	*/
-	xhr.onload = callBackCreateProduct();
+	xhr.onload = callBackCreateProducto();
 	xhr.send(null);
 	
 }
 
-function readIndividualProductRequest(){
+function readIndividualProductoRequest(){
 	//alert("leer individual");
 	xhr.open("GET","ProductoServlet");
 	//xhr.open("POST","LeerProductoServlet");
 	//procesado de informacion aquí
 	//
-	xhr.onload = callBackReadIndividualProduct;
+	xhr.onload = callBackReadIndividualProducto;
 	xhr.send(null); //aquí va el parametro?
 }
 
-function readGeneralProductRequest(){
+function readGeneralProductoRequest(){
 	//alert("leer general");
 	xhr.open("GET","ProductoServlet");
 	//xhr.open("POST","LeerGeneralProductoServlet");
 	//procesado de informacion aquí
 	//
-	xhr.onload = callBackReadGeneralProduct;
+	xhr.onload = callBackReadGeneralProducto;
 	xhr.send(null);
 }
 
-function updateProductRequest(){
+function updateProductoRequest(){
 	//alert("actualizar");
 	xhr.open("PUT","ProductoServlet");
 	//xhr.open("POST","ActualizarProductoServlet");
 	//procesado de informacion aquí
 	//
-	xhr.onload = callBackUpdateProduct;
+	xhr.onload = callBackUpdateProducto;
 	xhr.send(null);
 }
 
-function deleteProductRequest(){
+function deleteProductoRequest(){
 	//alert("borrar");
 	xhr.open("DELETE","ProductoServlet");
 	//xhr.open("POST","BorrarProductoServlet");
 	//procesado de informacion aquí
 	//
-	xhr.onload = callBackDeleteProduct;
+	xhr.onload = callBackDeleteProducto;
 	xhr.send(null);
 }
 
 //-------------  Call Back Function --------------
 
-function callBackCreateProduct(){
+function callBackCreateProducto(){
 	alert("Esperando Respuesta");
 	if(xhr.status == 200){
 		//alert("Creado Call back" + xhr.reponseText);
@@ -89,7 +89,7 @@ function callBackCreateProduct(){
 	}
 }
 
-function callBackReadIndividualProduct(){
+function callBackReadIndividualProducto(){
 	if(xhr.status == 200){
 		//alert("Leido individual" + xhr.reponseText);
 		//presentado de informacion
@@ -97,7 +97,7 @@ function callBackReadIndividualProduct(){
 	}
 }
 
-function callBackReadGeneralProduct(){
+function callBackReadGeneralProducto(){
 	if(xhr.status == 200){
 		//alert("Leido General" + xhr.reponseText);
 		//presentado de informacion
@@ -105,7 +105,7 @@ function callBackReadGeneralProduct(){
 	}
 }
 
-function callBackUpdateProduct(){
+function callBackUpdateProducto(){
 	if(xhr.status == 200){
 		//alert("Actualizado" + xhr.reponseText);
 		//presentado de informacion
@@ -113,7 +113,7 @@ function callBackUpdateProduct(){
 	}
 }
 
-function callBackDeleteProduct(){
+function callBackDeleteProducto(){
 	if(xhr.status == 200){
 		//alert("Borrado" + xhr.reponseText);
 		//presentado de informacion

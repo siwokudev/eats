@@ -4,6 +4,7 @@ public class Comanda {
 	private int id;
 	private Usuario usuario;
 	private float total;
+	private String direccionEntrega;
 
 	public Comanda() {
 	}
@@ -28,6 +29,14 @@ public class Comanda {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+
+	public String getDireccionEntrega() {
+		return direccionEntrega;
+	}
+
+	public void setDireccionEntrega(String direccionEntrega) {
+		this.direccionEntrega = direccionEntrega;
 	}
 
 	public float getTotal() {

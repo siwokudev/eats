@@ -1,7 +1,14 @@
-let xhr = new XMLHttpRequest(); //variable de xhr global para todos los scripts
 
 window.onload = function(){
-	productAjax();
+	//alert("funcionando script general");
+	
+	
+	comandaAjax();
+	productoAjax();
 	tipoBebidaAjax();
-	bebidaAjax();
+	tipoComidaAjax();
+	tipoDulcesAjax();
+	tipoProductoAjax();
+	usuarioAjax();
+	
 }

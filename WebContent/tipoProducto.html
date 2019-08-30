@@ -20,46 +20,33 @@
 				<h2>QTMeats title</h2>
 				<h6>Prueba Servlets</h6>
 				<div class="row">
-					<div class="col-12">
-					<ul>
-						<li>
-							<p>
-								<a href="comanda.html">Comanda</a>
-							</p>
-						</li>
-						<li>
-							<p>
-								<a href="producto.html">Producto</a>
-							</p>
-						</li>
-						<li>
-							<p>
-								<a href="tipoBebida.html">Tipo Bebida</a>
-							</p>
-						</li>
-						<li>
-							<p>
-								<a href="tipoComida.html">Tipo Comida</a>
-							</p>
-						</li>
-						<li>
-							<p>
-								<a href="tipoDulces.html">Tipo Dulces</a>
-							</p>
-						</li>
-						<li>
-							<p>
-								<a href="tipoProducto.html">Tipo Producto</a>
-							</p>
-						</li>
-						<li>
-							<p>
-								<a href="usuario.html">Usuario</a>
-							</p>
-						</li>
-					</ul>
 
+					<!------------ tipoProducto -------------------->
+					<div class="col-6">
+						
+						Prueba TipoProducto Servlet
+						<form action="">
+							<input id="btnActualizarTipoProducto" type="button"
+								value="Actualizar">
+						</form>
+						<form action="">
+							<input id="btnLeerIndividualTipoProducto" type="button" value="Leer">
+						</form>
+						<form action="">
+							<input id="btnLeerGeneralTipoProducto" type="button"
+								value="Leer General">
+						</form>
+						<form action="">
+							<input id="btnCrearTipoProducto" type="button" value="Crear">
+						</form>
+						<form action="">
+							<input id="btnBorrarTipoProducto" type="button" value="Borrar">
+						</form>
+						<div id="TipoProductoResultado">Resultado tipoProducto</div>
+						<!------------ /tipoProducto -------------------->
 					</div>
+					
+
 				</div>
 			</div>
 		</div>
@@ -79,6 +66,8 @@
 		crossorigin="anonymous"></script>
 		
 	<!-- qtm scripts -->
+	<script src="scripts/script.js"></script>
+	<script src="scripts/tipoProductoAjax.js"></script>
 	
 </body>
 </html>
