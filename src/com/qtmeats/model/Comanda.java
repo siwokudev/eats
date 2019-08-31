@@ -4,15 +4,19 @@ public class Comanda {
 	private int id;
 	private Usuario usuario;
 	private float total;
+	private String comentarios;
 	private String direccionEntrega;
 
 	public Comanda() {
 	}
 
-	public Comanda(int id, Usuario usuario, float total) {
+	public Comanda(int id, Usuario usuario, float total, String comentarios, String direccionEntrega) {
+		super();
 		this.id = id;
 		this.usuario = usuario;
 		this.total = total;
+		this.comentarios = comentarios;
+		this.direccionEntrega = direccionEntrega;
 	}
 
 	public int getId() {
@@ -31,6 +35,14 @@ public class Comanda {
 		this.usuario = usuario;
 	}
 
+	public String getComentarios() {
+		return comentarios;
+	}
+
+	public void setComentarios(String comentarios) {
+		this.comentarios = comentarios;
+	}
+
 	public String getDireccionEntrega() {
 		return direccionEntrega;
 	}
@@ -47,9 +59,12 @@ public class Comanda {
 		this.total = total;
 	}
 
+	
 	@Override
 	public String toString() {
-		return "Comanda [id=" + id + ", usuario=" + usuario + ", total=" + total + "]";
+		return "Comanda [id=" + id + ", usuario=" + usuario + ", total=" + total + ", comentarios=" + comentarios
+				+ ", direccionEntrega=" + direccionEntrega + "]";
 	}
+
 
 }
