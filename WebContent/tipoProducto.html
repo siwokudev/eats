@@ -24,28 +24,42 @@
 					<!------------ tipoProducto -------------------->
 					<div class="col-6">
 						
-						Prueba TipoProducto Servlet
+						CRUD TipoProducto
+						
+						<h2>Lectura General</h2>
 						<form action="">
 							<input id="btnLeerGeneralTipoProducto" type="button"
 								value="Leer General">
 						</form>
 						
-						<form action="">
+						<h2>Lectura Individual</h2>
+						<form >
 							<label for="txtId">Tipo Producto ID</label>
 							<input id="txtId" name="txtId">
 							<input id="btnLeerIndividualTipoProducto" type="button" value="Leer">
 						</form>
 						
-						<form action="">
+						<h2>Borrar</h2>
+						<form >
+							<label for="txtIdDelete">Tipo Producto ID</label>
+							<input type="text" id="txtIdDelete" name="txtIdDelete">
 							<input id="btnBorrarTipoProducto" type="button" value="Borrar">
 						</form>
 						
+						<h2>Actualizar</h2>
 						<form action="">
+							<label for="txtIdUpdate">Tipo Producto ID</label>
+							<input type="text" id="txtIdUpdate" name="txtIdUpdate">
+							<label for="txtNewId">Nuevo Tipo Producto ID</label>
+							<input type="text" name="txtNewTipo" id="txtNewTipo">
 							<input id="btnActualizarTipoProducto" type="button"
 								value="Actualizar">
 						</form>
 						
-						<form action="">
+						<h2>Crear</h2>
+						<form >
+							<label for="txtTipo">Tipo</label>
+							<input type="text" name="txtTipo" id="txtTipo">
 							<input id="btnCrearTipoProducto" type="button" value="Crear">
 						</form>
 

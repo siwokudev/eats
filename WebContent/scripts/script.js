@@ -2,7 +2,7 @@
 window.onload = function(){
 	//alert("funcionando script general");
 	
-	
+	/*
 	comandaAjax();
 	productoAjax();
 	tipoBebidaAjax();
@@ -10,5 +10,5 @@ window.onload = function(){
 	tipoDulcesAjax();
 	tipoProductoAjax();
 	usuarioAjax();
-	
+	*/
 }

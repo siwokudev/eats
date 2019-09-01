@@ -8,10 +8,16 @@
     <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/qtm?serverTimezone=UTC</property>
     <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">kaspornipov123jotengo</property>
+    <property name="hibernate.connection.password">kaspornipov</property>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <!-- Especifica la clas tipo entity que tiene anotaciones  -->
-    <mapping class="com.hibernatepractica2.model.Clientes"></mapping>
-    <mapping class="com.hibernatepractica2.model.Telefonos"></mapping>
+    <mapping class="com.qtmeats.model.Comanda"></mapping>
+    <mapping class="com.qtmeats.model.Producto"></mapping>
+    <mapping class="com.qtmeats.model.TipoBebida"></mapping>
+    <mapping class="com.qtmeats.model.TipoComida"></mapping>
+    <mapping class="com.qtmeats.model.TipoDulces"></mapping>
+    <mapping class="com.qtmeats.model.TipoProducto"></mapping>
+    <mapping class="com.qtmeats.model.Usuario"></mapping>
+    
   </session-factory>
 </hibernate-configuration>

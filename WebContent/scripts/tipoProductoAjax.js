@@ -1,5 +1,9 @@
 var xhr = new XMLHttpRequest();
 
+window.onload = function(){
+	tipoProductoAjax();
+}
+
 function tipoProductoAjax(){
 	
 	//alert("funcionando TipoProductos Script");
@@ -22,39 +26,28 @@ function tipoProductoAjax(){
 }
 
 function createTipoProductoRequest(){
-	alert("crear request");
-	
 	xhr.open("POST","TipoProductoServlet");
-	//xhr.open("POST","CrearTipoProductoServlet");
-	/*
-	var miFormulario = new FormData();
-	var miBase = document.getElementById("txtBase").value;
-	var miExponente = document.getElementById("txtExponente").value;
+	//xhr.setRequestHeader("Content-Type", "text/html")
 	
-	miFormulario.append("txtBase",miBase);
-	miFormulario.append("txtExponente",miExponente);
-	*/
-	xhr.onload = callBackCreateTipoProducto();
-	xhr.send(null);
-	
+	var formulario = new FormData();
+	var tipo = document.getElementById("txtTipo").value;
+	formulario.append("txtTipo",tipo);
+
+	xhr.onload = callBackCreateTipoProducto;
+	xhr.send(formulario);
 }
 
 function readIndividualTipoProductoRequest(){
-	//alert("leer individual");
-	xhr.open("GET","TipoProductoServlet");
-	//xhr.open("POST","LeerTipoProductoServlet");
-	//procesado de informacion aquí
-	//
+	var id = document.getElementById("txtId").value;
+	xhr.open("GET","TipoProductoServlet"+"?"+"txtId="+id);
+	
 	xhr.onload = callBackReadIndividualTipoProducto;
-	xhr.send(null); //aquí va el parametro?
+	xhr.send(null); //body del reques, solo para post
 }
 
 function readGeneralTipoProductoRequest(){
 	//alert("leer general");
 	xhr.open("GET","TipoProductoServlet");
-	//xhr.open("POST","LeerGeneralTipoProductoServlet");
-	//procesado de informacion aquí
-	//
 	xhr.onload = callBackReadGeneralTipoProducto;
 	xhr.send(null);
 }
@@ -62,27 +55,30 @@ function readGeneralTipoProductoRequest(){
 function updateTipoProductoRequest(){
 	//alert("actualizar");
 	xhr.open("PUT","TipoProductoServlet");
-	//xhr.open("POST","ActualizarTipoProductoServlet");
-	//procesado de informacion aquí
-	//
-	xhr.onload = callBackUpdateTipoProducto;
-	xhr.send(null);
+	var formulario = new FormData();
+	var id = document.getElementById("txtIdUpdate").value;
+	var tipo = document.getElementById("txtNewTipo").value;
+	formulario.append("txtId",id);
+	formulario.append("txtTipo",tipo);
+
+	xhr.onload = callBackCreateTipoProducto;
+	xhr.send(formulario);
 }
 
 function deleteTipoProductoRequest(){
 	//alert("borrar");
 	xhr.open("DELETE","TipoProductoServlet");
-	//xhr.open("POST","BorrarTipoProductoServlet");
-	//procesado de informacion aquí
-	//
+	var formulario = new FormData();
+	var id = document.getElementById("txtIdDelete").value;
+	formulario.append("txtId",id);
 	xhr.onload = callBackDeleteTipoProducto;
-	xhr.send(null);
+	xhr.send(formulario);
 }
 
 //-------------  Call Back Function --------------
 
 function callBackCreateTipoProducto(){
-	alert("Esperando Respuesta");
+	//alert("Esperando Respuesta");
 	if(xhr.status == 200){
 		//alert("Creado Call back" + xhr.reponseText);
 		document.querySelector("#TipoProductoResultado").innerHTML = xhr.responseText;
